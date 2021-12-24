@@ -178,4 +178,5 @@ Topics which are important to see in the terminal by running the **$ rostopic li
       /trajectory_execution_event
 
 
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/37059842/147336099-41999e01-d026-4683-847a-cf0d4c944fc9.gif)
 
