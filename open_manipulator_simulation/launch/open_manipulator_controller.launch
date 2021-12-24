@@ -1,0 +1,18 @@
+<launch>
+  <!-- arm controller -->
+  <rosparam file="$(find open_manipulator_simulation)/config/arm_controller.yaml" command="load"/>
+  <node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="spawn arm_controller"/>
+
+  <!-- gripper controller -->
+  <rosparam file="$(find open_manipulator_simulation)/config/gripper_controller.yaml" command="load"/>
+  <node name="gripper_controller_spawner" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="spawn gripper_controller"/>
+
+  <!--<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" args="joint1_position
+                          joint2_position
+                          joint3_position
+                          joint4_position
+                          gripper_position
+                          gripper_sub_position"/>-->
+
+</launch>
