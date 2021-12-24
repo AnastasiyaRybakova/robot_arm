@@ -93,6 +93,11 @@ In the new terminal:
 Before moving to the actual robot for the trajectory planning task testing, it is important to test how the different trajectories are planning and executing in the Simulation. For that need to run the command line below:
 
       $ roslaunch open_manipulator_simulation start_simulation.launch
+By running this node we start 3 things:
+      - The Gazebo world;
+      - Spawn the URDF of the robot arm;
+      - Start the control system for the simulated robot arm.
+
 In the new terminals need to run move group and Rviz:
 
       $ roslaunch open_manipulator_moveit_config move_group.launch
