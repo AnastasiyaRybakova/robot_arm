@@ -16,7 +16,7 @@ The package is including the Dynamixel Workbench and self-made OpenManipulator p
 - open_manipulator_moveit_config
 - open_manipulator_simulation
 
-To be able to succed in the building the package, you need to clone two more packages from the official repositories, which links are below:
+To be able to succeed in the building the package, you need to clone two more packages from the official repositories, which links are below:
 - [dynamixel_workbench_msgs](https://github.com/ROBOTIS-GIT/dynamixel-workbench-msgs)
 - [dynamixel_sdk](https://github.com/ROBOTIS-GIT/DynamixelSDK)
 - in the directory /dynamixel-workbench-msgs/dynamixel_workbench_msgs/srv you need to create the JointCommand.srv, which is below:
@@ -88,3 +88,7 @@ In the new terminal:
              
 #### The result of running the code:
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/37059842/114139017-6fa9e680-9949-11eb-9ad4-70b69129e2e2.gif)     
+
+# Simulation Gazebo + Rviz
+
+Before moving to the actual robot for the trajectory planning task testing, it is important to test how the different trajectories are planning and executing in the Simulation. For that need to run the command line below:
