@@ -48,5 +48,31 @@ For that you have to follow the steps below:
 - In the terminal we can see topics by using the command line:
 
       $ rostopic list
-- In the terminal should be main topics belong to the 
+- In the terminal should be main topics belong to the controlling function of the robot:
 
+      /dynamixel_state
+      /goal_dynamixel_position
+      /joint_states
+      /rosout
+      /rosout_agg
+ 
+- By the line command below it's possible to check the each joint position:
+
+      $ rostopic echo /joint_states -n1
+      
+It is possible to see in the terminal the data like that way:
+
+      header: 
+            seq: 3994
+            stamp: 
+                  secs: 1640324659
+                  nsecs: 518055098
+            frame_id: ''
+      name: [id_11, id_12, id_13, id_14, id_15]
+      position: [-0.0015339808305725455, -0.27458256483078003, 0.7439807057380676, 1.087592363357544, 0.42644667625427246]
+      velocity: [0.0, 0.0, 0.0, 0.0, 0.0]
+      effort: []
+      ---
+In the terminal represented name of joints and their positions respectively. Furthermore, it is possible to check the joints' positions after chacnging the actual robot state to be able to apply to the python code those parameters.
+
+- 
