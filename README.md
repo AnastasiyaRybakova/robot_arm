@@ -77,18 +77,100 @@ In the terminal represented name of joints and their positions respectively. Fur
 
 - The next step after applying postion parameters to the Python node we can test it directly. For that follow steps below:
 
-            $ cd ~/catkin_ws
-            $ source devel/setup.bash
-            $ rospack profile
-            $ roslaunch dynamixel_workbench_controllers position_control.launch 
+      $ cd ~/catkin_ws
+      $ source devel/setup.bash
+      $ rospack profile
+      $ roslaunch dynamixel_workbench_controllers position_control.launch 
 In the new terminal:
 
-            $ cd src/openmanipulator_move/scripts
-            $ rosrun openmanipulator_move move_openmanipulator.py
-             
+      $ cd src/openmanipulator_move/scripts
+      $ rosrun openmanipulator_move move_openmanipulator.py      
 #### The result of running the code:
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/37059842/114139017-6fa9e680-9949-11eb-9ad4-70b69129e2e2.gif)     
 
 # Simulation Gazebo + Rviz
 
 Before moving to the actual robot for the trajectory planning task testing, it is important to test how the different trajectories are planning and executing in the Simulation. For that need to run the command line below:
+
+      $ roslaunch open_manipulator_simulation start_simulation.launch
+In the new terminals need to run move group and Rviz:
+
+      $ roslaunch open_manipulator_moveit_config move_group.launch
+      $ roslaunch open_manipulator_moveit_config moveit_rviz.launch
+Topics which are important to see in the terminal by running the **$ rostopic list** command line:
+
+      /arm_controller/command
+      /arm_controller/follow_joint_trajectory/cancel
+      /arm_controller/follow_joint_trajectory/feedback
+      /arm_controller/follow_joint_trajectory/goal
+      /arm_controller/follow_joint_trajectory/result
+      /arm_controller/follow_joint_trajectory/status
+      /arm_controller/state
+      /attached_collision_object
+      /calibrated
+      /clock
+      /collision_object
+      /execute_trajectory/cancel
+      /execute_trajectory/feedback
+      /execute_trajectory/goal
+      /execute_trajectory/result
+      /execute_trajectory/status
+      /gazebo/link_states
+      /gazebo/model_states
+      /gazebo/parameter_descriptions
+      /gazebo/parameter_updates
+      /gazebo/set_link_state
+      /gazebo/set_model_state
+      /gazebo_ros_control/pid_gains/joint1/parameter_descriptions
+      /gazebo_ros_control/pid_gains/joint1/parameter_updates
+      /gazebo_ros_control/pid_gains/joint2/parameter_descriptions
+      /gazebo_ros_control/pid_gains/joint2/parameter_updates
+      /gazebo_ros_control/pid_gains/joint3/parameter_descriptions
+      /gazebo_ros_control/pid_gains/joint3/parameter_updates
+      /gazebo_ros_control/pid_gains/joint4/parameter_descriptions
+      /gazebo_ros_control/pid_gains/joint4/parameter_updates
+      /joint_states
+      /move_group/cancel
+      /move_group/display_contacts
+      /move_group/display_planned_path
+      /move_group/feedback
+      /move_group/goal
+      /move_group/monitored_planning_scene
+      /move_group/ompl/parameter_descriptions
+      /move_group/ompl/parameter_updates
+      /move_group/plan_execution/parameter_descriptions
+      /move_group/plan_execution/parameter_updates
+      /move_group/planning_scene_monitor/parameter_descriptions
+      /move_group/planning_scene_monitor/parameter_updates
+      /move_group/result
+      /move_group/sense_for_plan/parameter_descriptions
+      /move_group/sense_for_plan/parameter_updates
+      /move_group/status
+      /move_group/trajectory_execution/parameter_descriptions
+      /move_group/trajectory_execution/parameter_updates
+      /pickup/cancel
+      /pickup/feedback
+      /pickup/goal
+      /pickup/result
+      /pickup/status
+      /place/cancel
+      /place/feedback
+      /place/goal
+      /place/result
+      /place/status
+      /planning_scene
+      /planning_scene_world
+      /recognized_object_array
+      /rosout
+      /rosout_agg
+      /rviz_kist_kist_30263_5655003044675183351/motionplanning_planning_scene_monitor/parameter_descriptions
+      /rviz_kist_kist_30263_5655003044675183351/motionplanning_planning_scene_monitor/parameter_updates
+      /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/feedback
+      /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update
+      /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic/update_full
+      /tf
+      /tf_static
+      /trajectory_execution_event
+
+
+
