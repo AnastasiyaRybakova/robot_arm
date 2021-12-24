@@ -36,5 +36,17 @@ The openManipulator is based on the U2D2 converter connection between the robot 
 You can find here the instructions about how to make the connection with [U2D2](https://emanual.robotis.com/docs/en/parts/interface/u2d2/)
 
 ## Software
-The  package structure:
-- DynamixelSDK
+### Testing the actual robot and some motions by it.
+
+The first step I have started with was setting and testing the actual robot with the Python node, which allows us to see movement by it. 
+For that you have to follow the steps below:
+- Let's run the node to activate the motors of the actual robot by:
+ 
+      $ roslaunch dynamixel_workbench_controllers position_control.launch  
+
+- After the motors will be ready, you will not be able to move any joint by hand.
+- In the terminal we can see topics by using the command line:
+
+      $ rostopic list
+- In the terminal should be main topics belong to the 
+
