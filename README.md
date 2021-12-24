@@ -85,4 +85,6 @@ In the new terminal:
 
             $ cd src/openmanipulator_move/scripts
             $ rosrun openmanipulator_move move_openmanipulator.py
-      
+             
+#### The result of running the code:
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/37059842/114139017-6fa9e680-9949-11eb-9ad4-70b69129e2e2.gif)     
