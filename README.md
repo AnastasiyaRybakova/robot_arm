@@ -75,4 +75,14 @@ It is possible to see in the terminal the data like that way:
       ---
 In the terminal represented name of joints and their positions respectively. Furthermore, it is possible to check the joints' positions after chacnging the actual robot state to be able to apply to the python code those parameters.
 
-- 
+- The next step after applying postion parameters to the Python node we can test it directly. For that follow steps below:
+
+            $ cd ~/catkin_ws
+            $ source devel/setup.bash
+            $ rospack profile
+            $ roslaunch dynamixel_workbench_controllers position_control.launch 
+In the new terminal:
+
+            $ cd src/openmanipulator_move/scripts
+            $ rosrun openmanipulator_move move_openmanipulator.py
+      
